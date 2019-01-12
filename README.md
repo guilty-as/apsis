@@ -37,7 +37,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Open
 - [ ] OptOut
 - [ ] Sending
-- [ ] Sms
+- [x] Sms
 - [x] Subscriber
 - [ ] Transactional
 
