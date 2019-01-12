@@ -10,7 +10,8 @@ use GuzzleHttp\ClientInterface;
  * Class Factory.
  *
  * @method \Guilty\Apsis\Services\Account account()
- * @method \Guilty\Apsis\Services\event event()
+ * @method \Guilty\Apsis\Services\Event event()
+ * @method \Guilty\Apsis\Services\Subscriber subscriber()
  */
 class Factory
 {
