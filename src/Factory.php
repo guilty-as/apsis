@@ -19,6 +19,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Transactional transactional()
  * @method \Guilty\Apsis\Services\Folder folder()
  * @method \Guilty\Apsis\Services\Click click()
+ * @method \Guilty\Apsis\Services\MailingList mailingList()
  */
 class Factory
 {

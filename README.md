@@ -33,7 +33,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Filter
 - [x] Folder
 - [ ] Import
-- [ ] MailingList
+- [x] MailingList
 - [ ] Newsletter
 - [x] Open
 - [ ] OptOut
