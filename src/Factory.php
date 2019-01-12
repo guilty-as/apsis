@@ -34,9 +34,9 @@ class Factory
      * @param string $apiKey APSIS API Key
      * @param \GuzzleHttp\ClientInterface|null $client If you wish to override the client
      */
-    public function __construct($apiKey, ClientInterface $client = null)
+    public function __construct($apiKey, ClientInterface $client = null, $https = true)
     {
-        $this->client = $client ?: $this->makeDefaultClient($apiKey);
+        $this->client = $client ?: $this->makeDefaultClient($apiKey, $https);
     }
 
     /**
@@ -44,9 +44,9 @@ class Factory
      * @param null|\GuzzleHttp\ClientInterface $client
      * @return \Guilty\Apsis\Factory
      */
-    public static function create($apiKey, $client = null)
+    public static function create($apiKey, $client = null, $https = true)
     {
-        return new static($apiKey, $client);
+        return new static($apiKey, $client, $https);
     }
 
 
@@ -64,11 +64,13 @@ class Factory
         return new $resource($this->client);
     }
 
-    public function makeDefaultClient($apiKey)
+    public function makeDefaultClient($apiKey, $https = true)
     {
+        $baseUri = $https ? 'https://se.api.anpdm.com/' : 'http://se.api.anpdm.com/';
+
         return new Client(
             [
-                'base_uri' => 'http://se.api.anpdm.com/',
+                'base_uri' => $baseUri,
                 'headers' => ['Accept' => 'application/json'],
                 'auth' => [$apiKey, '', 'basic']
             ]
