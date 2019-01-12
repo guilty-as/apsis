@@ -12,6 +12,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Account account()
  * @method \Guilty\Apsis\Services\Event event()
  * @method \Guilty\Apsis\Services\Subscriber subscriber()
+ * @method \Guilty\Apsis\Services\Open open()
  */
 class Factory
 {
