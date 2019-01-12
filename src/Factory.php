@@ -13,6 +13,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Event event()
  * @method \Guilty\Apsis\Services\Subscriber subscriber()
  * @method \Guilty\Apsis\Services\Open open()
+ * @method \Guilty\Apsis\Services\Bounce bounce()
  */
 class Factory
 {

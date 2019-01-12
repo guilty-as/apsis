@@ -22,6 +22,25 @@ composer require guilty/apsis-api
 TODO
 ```
 
+### TODO list
+These services are currently implemented, the rest is being worked on and will be checked off once completed.
+
+- [x] Account
+- [ ] Bounce (Waiting on APSIS support to provide the correct date format)
+- [ ] Click
+- [x] Event
+- [ ] Filter
+- [ ] Folder
+- [ ] Import
+- [ ] MailingList
+- [ ] Newsletter
+- [x] Open
+- [ ] OptOut
+- [ ] Sending
+- [ ] Sms
+- [x] Subscriber
+- [ ] Transactional
+
 
 ### Security
 
