@@ -1,7 +1,7 @@
 # APSIS PHP API Client
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/guilty/apsis-api.svg?style=flat-square)](https://packagist.org/packages/guilty/apsis-api)
-[![Total Downloads](https://img.shields.io/packagist/dt/guilty/apsis-api.svg?style=flat-square)](https://packagist.org/packages/guilty/apsis-api)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/guilty/apsis.svg?style=flat-square)](https://packagist.org/packages/guilty/apsis)
+[![Total Downloads](https://img.shields.io/packagist/dt/guilty/apsis.svg?style=flat-square)](https://packagist.org/packages/guilty/apsis)
 
 
 APSIS API client, used for interacting with the [APSIS](https://www.apsis.com/) API: http://se.apidoc.anpdm.com
