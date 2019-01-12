@@ -18,8 +18,27 @@ composer require guilty/apsis
 
 ## Usage
 
+### Available services
 ``` php
-TODO
+
+use \Guilty\Apsis\Factory;
+
+$apiKey = "YOUR-API-KEY";
+$accountService = Factory::create($apiKey)->account()
+$eventService = Factory::create($apiKey)->event()
+$subscriberService = Factory::create($apiKey)->subscriber()
+$openService = Factory::create($apiKey)->open()
+$bounceService = Factory::create($apiKey)->bounce()
+$smsService = Factory::create($apiKey)->sms()
+$filterService = Factory::create($apiKey)->filter()
+$transactionalService = Factory::create($apiKey)->transactional()
+$folderService = Factory::create($apiKey)->folder()
+$clickService = Factory::create($apiKey)->click()
+$mailingListService = Factory::create($apiKey)->mailingList()
+$newsletterService = Factory::create($apiKey)->newsletter()
+$sendingService = Factory::create($apiKey)->sending()
+$optOutService = Factory::create($apiKey)->optOut()
+
 ```
 
 ### Implemented Services
