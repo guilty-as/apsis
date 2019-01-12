@@ -39,7 +39,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [ ] Sending
 - [x] Sms
 - [x] Subscriber
-- [ ] Transactional
+- [x] Transactional (**NOTE**: sendTransactionalEmail(), might not work right yet)
 
 
 ### Security
