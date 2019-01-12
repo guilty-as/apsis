@@ -22,6 +22,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\MailingList mailingList()
  * @method \Guilty\Apsis\Services\Newsletter newsletter()
  * @method \Guilty\Apsis\Services\Sending sending()
+ * @method \Guilty\Apsis\Services\OptOut optOut()
  */
 class Factory
 {

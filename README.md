@@ -36,7 +36,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] MailingList
 - [x] Newsletter
 - [x] Open
-- [ ] OptOut
+- [x] OptOut
 - [x] Sending
 - [x] Sms
 - [x] Subscriber
