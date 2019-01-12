@@ -25,7 +25,7 @@ TODO
 
 ### Security
 
-If you discover any security related issues, please email helgesverre@guilty.no instead of using the issue tracker.
+If you discover any security related issues, please email tech@guilty.no instead of using the issue tracker.
 
 
 ## License
