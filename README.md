@@ -16,6 +16,58 @@ composer require guilty/apsis
 ```
 
 
+## Laravel
+
+This package is compatible with Laravel
+
+You can publish the config file like so
+```
+php artisan vendor:publish --provider="Guilty\Apsis\ApsisServiceProvider" --tag="config"
+```
+
+This is the contents of the published config file:
+
+```php
+return [
+    /*
+     * This is the API key for your APSIS account.
+     * Read how to generate an api key here:
+     * http://se.apidoc.anpdm.com/Help/GettingStarted/Getting%20started
+     */
+    "api_key" => env("APSIS_API_KEY")
+];
+```
+
+To get started, add the following environment variable to your .env file:
+
+```
+APSIS_API_KEY="your-api-key"
+```
+
+
+You can use the facade like so:
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class NewsletterController extends Controller
+{
+    public function index()
+    {
+        $newsletters = Apsis::newsletter()->getAllNewsletters();
+        
+        return view('home', [
+            "newsletters" => $newsletters
+        ]);
+    }
+}
+
+```
+
+
 ## API Usage
 
 ### Available services

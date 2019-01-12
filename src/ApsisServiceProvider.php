@@ -24,5 +24,11 @@ class ApsisServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'apsis');
+        
+        $this->app->singleton(Factory::class, function () {
+            $apiKey = config('apsis.api_key');
+            return Factory::create($apiKey);
+        });
+
     }
 }
