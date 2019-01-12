@@ -77,20 +77,24 @@ use \Guilty\Apsis\Factory;
 
 $apiKey = "YOUR-API-KEY";
 
-$accountService = Factory::create($apiKey)->account()
-$eventService = Factory::create($apiKey)->event()
-$subscriberService = Factory::create($apiKey)->subscriber()
-$openService = Factory::create($apiKey)->open()
-$bounceService = Factory::create($apiKey)->bounce()
-$smsService = Factory::create($apiKey)->sms()
-$filterService = Factory::create($apiKey)->filter()
-$transactionalService = Factory::create($apiKey)->transactional()
-$folderService = Factory::create($apiKey)->folder()
-$clickService = Factory::create($apiKey)->click()
-$mailingListService = Factory::create($apiKey)->mailingList()
-$newsletterService = Factory::create($apiKey)->newsletter()
-$sendingService = Factory::create($apiKey)->sending()
-$optOutService = Factory::create($apiKey)->optOut()
+// Create a factory like so
+$factory = Factory::create($apiKey);
+
+// Then fetch the service you need
+$accountService = $factory->account()
+$eventService = $factory->event()
+$subscriberService = $factory->subscriber()
+$openService = $factory->open()
+$bounceService = $factory->bounce()
+$smsService = $factory->sms()
+$filterService = $factory->filter()
+$transactionalService = $factory->transactional()
+$folderService = $factory->folder()
+$clickService = $factory->click()
+$mailingListService = $factory->mailingList()
+$newsletterService = $factory->newsletter()
+$sendingService = $factory->sending()
+$optOutService = $factory->optOut()
 
 ```
 
