@@ -57,10 +57,10 @@ class NewsletterController extends Controller
 {
     public function index()
     {
-        $newsletters = Apsis::newsletter()->getAllNewsletters();
-        
+        $newsletters = Apsis::newsletter()->getNewslettersPaginated(1, 10);
+                   
         return view('home', [
-            "newsletters" => $newsletters
+            "newsletters" => $newsletters->Result->Items
         ]);
     }
 }
