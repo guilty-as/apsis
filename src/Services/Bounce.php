@@ -72,8 +72,8 @@ class Bounce extends Service
     /**
      * Get bounces for an account between two dates (Paginated)
      *
-     * @param $startDateStr
-     * @param $endDateStr
+     * @param \DateTimeInterface $start
+     * @param \DateTimeInterface $end
      * @param string|int $pageNumber
      * @param string|int $pageSize
      * @return mixed
