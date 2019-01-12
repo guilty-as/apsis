@@ -15,7 +15,7 @@ class Click extends Service
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function GetClicksBySendqueueIdPaginated($sendQueueId, $pageNumber, $pageSize)
+    public function getClicksBySendqueueIdPaginated($sendQueueId, $pageNumber, $pageSize)
     {
         $endpoint = "/v1/clicks/sendqueues/{$sendQueueId}/page/{$pageNumber}/size/{$pageSize}";
         $response = $this->client->request("get", $endpoint);
