@@ -15,6 +15,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Open open()
  * @method \Guilty\Apsis\Services\Bounce bounce()
  * @method \Guilty\Apsis\Services\Sms sms()
+ * @method \Guilty\Apsis\Services\Filter filter()
  */
 class Factory
 {

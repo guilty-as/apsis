@@ -29,7 +29,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Bounce
 - [ ] Click
 - [x] Event
-- [ ] Filter
+- [x] Filter
 - [ ] Folder
 - [ ] Import
 - [ ] MailingList
