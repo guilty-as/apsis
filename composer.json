@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Guilty\\Apsis\\SkeletonServiceProvider"
+                "Guilty\\Apsis\\ApsisServiceProvider"
             ],
             "aliases": {
                 "Apsis": "Guilty\\Apsis\\ApsisFacade"
