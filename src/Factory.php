@@ -18,6 +18,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Filter filter()
  * @method \Guilty\Apsis\Services\Transactional transactional()
  * @method \Guilty\Apsis\Services\Folder folder()
+ * @method \Guilty\Apsis\Services\Click click()
  */
 class Factory
 {

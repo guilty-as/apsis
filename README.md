@@ -27,7 +27,7 @@ These services are currently implemented, the rest is being worked on and will b
 
 - [x] Account
 - [x] Bounce
-- [ ] Click
+- [x] Click
 - [x] Event
 - [x] Filter
 - [x] Folder
