@@ -4,7 +4,7 @@
 namespace Guilty\Apsis\Services;
 
 
-use Guilty\Apsis\Transactional\TransactionalEmail;
+use Guilty\Apsis\Builders\TransactionalEmail;
 use Guilty\Apsis\Utils\DateFormatter;
 
 class Transactional extends Service
