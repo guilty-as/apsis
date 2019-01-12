@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Guilty\Apsis\Transactional;
+namespace Guilty\Apsis\Builders;
 
 
 class TransactionalEmail
