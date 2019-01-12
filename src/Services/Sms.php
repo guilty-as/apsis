@@ -5,7 +5,6 @@ namespace Guilty\Apsis\Services;
 
 
 use Guilty\Apsis\Utils\DateFormatter;
-use function GuzzleHttp\Psr7\build_query;
 
 class Sms extends Service
 {
