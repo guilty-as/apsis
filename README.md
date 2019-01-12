@@ -22,7 +22,8 @@ composer require guilty/apsis
 TODO
 ```
 
-### TODO list
+### Implemented Services
+
 These services are currently implemented, the rest is being worked on and will be checked off once completed.
 
 - [x] Account
