@@ -12,7 +12,7 @@ APSIS API client, used for interacting with the [APSIS](https://www.apsis.com/) 
 You can install the package via composer:
 
 ```bash
-composer require guilty/apsis-api
+composer require guilty/apsis
 ```
 
 
