@@ -1,6 +1,6 @@
 {
     "name": "guilty/apsis",
-    "description": "APSIS API SDK",
+    "description": "APSIS PHP API Client",
     "keywords": [
         "guilty",
         "apsis"
@@ -19,10 +19,6 @@
         "php": "^7.1",
         "guzzlehttp/guzzle": "^6.3"
     },
-    "require-dev": {
-        "larapack/dd": "^1.0",
-        "phpunit/phpunit": "^7.0"
-    },
     "autoload": {
         "psr-4": {
             "Guilty\\Apsis\\": "src"
@@ -32,11 +28,6 @@
         "psr-4": {
             "Guilty\\Apsis\\Tests\\": "tests"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
