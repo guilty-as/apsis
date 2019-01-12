@@ -4,8 +4,6 @@
 namespace Guilty\Apsis\Services;
 
 
-use Guilty\Apsis\Types\OperatorValue;
-
 class Filter extends Service
 {
 

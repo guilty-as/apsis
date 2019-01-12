@@ -30,7 +30,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [ ] Click
 - [x] Event
 - [x] Filter
-- [ ] Folder
+- [x] Folder
 - [ ] Import
 - [ ] MailingList
 - [ ] Newsletter
