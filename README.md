@@ -37,7 +37,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Newsletter
 - [x] Open
 - [ ] OptOut
-- [ ] Sending
+- [x] Sending
 - [x] Sms
 - [x] Subscriber
 - [x] Transactional (**NOTE**: sendTransactionalEmail(), might not work right yet)
