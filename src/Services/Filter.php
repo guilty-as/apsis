@@ -14,6 +14,8 @@ class Filter extends Service
      * - $this->createFilterByDemographicData("Only sweden", "Country", OperatorValue::EQUAL, "Norway")
      * - $this->createFilterByDemographicData("Except sweden", "Country", OperatorValue::NOT_EQUAL, "Sweden")
      *
+     * Note: Date format is yyyy-mm-dd for date operators values
+     *
      * @param string $filterName Filter name. Must not be empty and must be unique. Max length 255 characters.
      * @param string $demographicDataName The name of the demographic data field. Must exist on account and must not be empty. Max length 100 characters.
      * @param string $demographicDataValue The value for the demographic data field. Must not be empty. Max length 500 characters.
