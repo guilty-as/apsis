@@ -26,7 +26,7 @@ TODO
 These services are currently implemented, the rest is being worked on and will be checked off once completed.
 
 - [x] Account
-- [ ] Bounce (Waiting on APSIS support to provide the correct date format)
+- [x] Bounce
 - [ ] Click
 - [x] Event
 - [ ] Filter

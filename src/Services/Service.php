@@ -15,6 +15,11 @@ abstract class Service
     protected $client;
 
     /**
+     * @var string The date format expected by the APSIS api
+     */
+    protected $dateFormat = "Ymd\THis";
+
+    /**
      * Resource constructor.
      *
      * @param $client

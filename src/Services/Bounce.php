@@ -56,16 +56,14 @@ class Bounce extends Service
     /**
      * Get bounces between two dates (Queued)
      *
-     * @param $startDateStr
-     * @param $endDateStr
+     * @param \DateTimeInterface $start
+     * @param \DateTimeInterface $end
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getByDateInterval($startDateStr, $endDateStr)
+    public function getByDateInterval(\DateTimeInterface $start, \DateTimeInterface $end)
     {
-        // TODO: Accept DateTime objects and convert to correct format,
-        // TODO: currently waiting for apsis api support to tell me which format is supposed to be used, it was not in the docs.
-        $endpoint = "/v1/bounces/date/from/{$startDateStr}/to/{$endDateStr}";
+        $endpoint = "/v1/bounces/date/from/{$start->format($this->dateFormat)}/to/{$end->format($this->dateFormat)}";
         $response = $this->client->request("post", $endpoint);
 
         return $this->responseToJson($response);
@@ -81,9 +79,9 @@ class Bounce extends Service
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getByDateIntervalPaginated($startDateStr, $endDateStr, $pageNumber, $pageSize)
+    public function getByDateIntervalPaginated(\DateTimeInterface $start, \DateTimeInterface $end, $pageNumber, $pageSize)
     {
-        $endpoint = "/v1/bounces/date/from/{$startDateStr}/to/{$endDateStr}/page/{$pageNumber}/size/{$pageSize}";
+        $endpoint = "/v1/bounces/date/from/{$start->format($this->dateFormat)}/to/{$end->format($this->dateFormat)}/page/{$pageNumber}/size/{$pageSize}";
         $response = $this->client->request("get", $endpoint);
 
         return $this->responseToJson($response);
