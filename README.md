@@ -1,7 +1,6 @@
 # APSIS PHP API Client
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/guilty-as/apsis-api.svg?style=flat-square)](https://packagist.org/packages/guilty-as/apsis-api)
-[![Build Status](https://img.shields.io/travis/guilty-as/apsis-api/master.svg?style=flat-square)](https://travis-ci.org/guilty-as/apsis-api)
 [![Quality Score](https://img.shields.io/scrutinizer/g/guilty-as/apsis-api.svg?style=flat-square)](https://scrutinizer-ci.com/g/guilty-as/apsis-api)
 [![Total Downloads](https://img.shields.io/packagist/dt/guilty-as/apsis-api.svg?style=flat-square)](https://packagist.org/packages/guilty-as/apsis-api)
 
