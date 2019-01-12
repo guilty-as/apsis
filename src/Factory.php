@@ -20,6 +20,7 @@ use GuzzleHttp\ClientInterface;
  * @method \Guilty\Apsis\Services\Folder folder()
  * @method \Guilty\Apsis\Services\Click click()
  * @method \Guilty\Apsis\Services\MailingList mailingList()
+ * @method \Guilty\Apsis\Services\Newsletter newsletter()
  */
 class Factory
 {

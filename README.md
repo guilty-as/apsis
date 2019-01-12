@@ -34,7 +34,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Folder
 - [ ] Import
 - [x] MailingList
-- [ ] Newsletter
+- [x] Newsletter
 - [x] Open
 - [ ] OptOut
 - [ ] Sending
