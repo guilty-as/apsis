@@ -45,7 +45,7 @@ class Factory
 
 
     /**
-     * Return an instance of a Resource based on the method called.
+     * Return an instance of a Service based on the method called.
      *
      * @param string $name
      * @param array $arguments
