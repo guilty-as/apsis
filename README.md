@@ -46,7 +46,7 @@ APSIS_API_KEY="your-api-key"
 
 
 You can use the facade like so:
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -71,7 +71,7 @@ class NewsletterController extends Controller
 ## API Usage
 
 ### Available services
-``` php
+```php
 
 use \Guilty\Apsis\Factory;
 
@@ -95,11 +95,10 @@ $mailingListService = $factory->mailingList()
 $newsletterService = $factory->newsletter()
 $sendingService = $factory->sending()
 $optOutService = $factory->optOut()
-
 ```
 
 ### Account Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $accountService = Factory::create($apiKey)->account()
 $accountService->createSingleSignOnUrl();
@@ -107,7 +106,7 @@ $accountService->getDemographicData();
 ```
 
 ### Bounce Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $bounceService = Factory::create($apiKey)->bounce()
 $bounceService->getAll()
@@ -119,14 +118,14 @@ $bounceService->getBySendqueueIds($sendqueueIds)
 ```
 
 ### Click Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $clickService = Factory::create($apiKey)->click()
 $clickService->getClicksBySendqueueIdPaginated($sendQueueId, $pageNumber, $pageSize)
 ```
 
 ### Event Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $eventService = Factory::create($apiKey)->event()
 $eventService->addAttendee($eventId, $sessionId, $attendeeData)
@@ -144,7 +143,7 @@ $eventService->updateAttendeeStatus($eventId, $attendeeId, $attendeeStatus)
 ```
 
 ### Filter Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $filterService = Factory::create($apiKey)->filter()
 $filterService->createFilterByDemographicData($filterName, $demographicDataName, $operatorValue, $demographicDataValue)
@@ -153,7 +152,7 @@ $filterService->getAllFilters()
 
 
 ### Folder Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $folderService = Factory::create($apiKey)->folder()
 $filterService->createFilterByDemographicData($filterName, $demographicDataName, $operatorValue, $demographicDataValue)
@@ -162,7 +161,7 @@ $filterService->getAllFolders()
 ```
 
 ### Mailing List Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $mailingListService = Factory::create($apiKey)->mailingList()
 $mailingListService->createMailinglist($mailingListDetails)
@@ -183,7 +182,7 @@ $mailingListService->updateMailingList($mailinglistId, $mailingListDetails)
 ```
 
 ### Newsletter List Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $newsletterListService = Factory::create($apiKey)->newsletter()
 $newsletterListService->createNewsletter($newsletterData)
@@ -197,14 +196,14 @@ $newsletterListService->updateNewsletter($newsletterId, $newsletterData)
 ```
 
 ### Open Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $openService = Factory::create($apiKey)->open()
 $openService->getOpensBySendqueueIdPaginated($sendQueueId, $pageNumber, $pageSize)
 ```
 
 ### Opt Out Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $optOutService = Factory::create($apiKey)->optOut()
 $optOutService->deleteSubscriberFromOptOutAllByEmail($subscriberEmail)
@@ -224,7 +223,7 @@ $optOutService->optOutAllSubscribers($optOutListSubscriberItems)
 ```
 
 ### Sending Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $sendingService = Factory::create($apiKey)->sending()
 $sendingService->deleteSendingById($sendQueueId)
@@ -242,7 +241,7 @@ $sendingService->sendNewsletter($newsletterDetails)
 ```
 
 ### Sms Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $smsService = Factory::create($apiKey)->sms()
 $smsService->createSmsMessage($name, $text, $folderId = null)
@@ -255,7 +254,7 @@ $smsService->sendSmsMessage($smsMessageId, $mailingListIds, $senderName = null,
 ```
 
 ### Subscriber Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $subscriberService = Factory::create($apiKey)->subscriber()
 $subscriberService->createSubscriber($mailingListId, $updateIfExists, $subscriber)
@@ -276,7 +275,7 @@ $subscriberService->updateSubscribers($subscribers)
 ```
 
 ### Transactional Service
-```
+```php
 $apiKey = "YOUR-API-KEY";
 $transactionalService = Factory::create($apiKey)->transactional()
 $transactionalService->getTransactionalBounces($projectId, \DateTimeInterface $dateFrom = null, \DateTimeInterface $dateTo = null)
