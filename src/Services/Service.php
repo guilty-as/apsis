@@ -32,6 +32,6 @@ abstract class Service
     public function responseToJson(ResponseInterface $response)
     {
         $string = $response->getBody()->getContents();
-        return json_decode($string);
+        return json_decode($string, true);
     }
 }
