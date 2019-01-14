@@ -287,6 +287,49 @@ $transactionalService->sendTransactionalEmail($projectId, TransactionalEmail $tr
 ```
 
 
+### Queued Methods
+
+To make it easier to work with [Queued Methods](http://se.apidoc.anpdm.com/Help/QueuedMethods/About%20queued%20methods), you can use the QueuedMethodHelper to poll and retrieve data from any queued method. 
+
+Just pass the response of a Queued Method into the ```QueuedMethodHelper::fromJson()``` method and you will have an instance.
+ 
+Below is an example of how you could use this: 
+
+```php
+
+$factory = \Guilty\Apsis\Factory::create("YOUR-API-KEY");
+$newsletterService = $factory->newsletter();
+
+// 'deleteMultipleNewsletters' is a queued method.
+$response = $newsletterService->deleteMultipleNewsletters([1, 2, 3, 4]);
+
+// Pass the QueuedMethodHelper the response from a queued method.
+$poll = QueuedMethodHelper::fromJson($response, $factory->getClient());
+
+while (true) {
+    echo "Polling: {$poll->getPollUrl()}";
+
+    try {
+        // Poll for latest status
+        $poll->poll();
+
+        // Check if the data is ready now.
+        if ($poll->isDataReady()) {
+            continue; // Jump out of loop if it is.
+        }
+
+        // Wait 1 second
+        sleep(1);
+    } catch (Exception $e) {
+        die("Something unexpected happened...");
+    }
+}
+
+// Fetch the data
+$queuedMethodDataResult = $poll->retrieveData();
+```
+
+
 ## Implemented Services
 
 These services are currently implemented, the rest is being worked on and will be checked off once completed.
