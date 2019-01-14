@@ -79,4 +79,9 @@ class Factory
             ]
         );
     }
+
+    public function getClient()
+    {
+        return $this->client;
+    }
 }
