@@ -315,7 +315,7 @@ while (true) {
 
         // Check if the data is ready now.
         if ($poll->isDataReady()) {
-            continue; // Jump out of loop if it is.
+            break; // Jump out of loop if it is.
         }
 
         // Wait 1 second
