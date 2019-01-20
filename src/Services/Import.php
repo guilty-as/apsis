@@ -5,6 +5,8 @@ namespace Guilty\Apsis\Services;
 
 
 use Guilty\Apsis\Builders\CsvImport;
+use Guilty\Apsis\Utils\BooleanFormatter;
+use GuzzleHttp\RequestOptions;
 
 class Import extends Service
 {
@@ -34,6 +36,38 @@ class Import extends Service
         $endpoint = "/import/v4/csv";
         $response = $this->client->request("post", $endpoint, [
             \GuzzleHttp\RequestOptions::JSON => array_filter($params)
+        ]);
+
+        return $this->responseToJson($response);
+    }
+
+    /**
+     * Batch import multiple subscribers using XML-data.
+     *
+     * NB! It is recommended that each batch should not be larger than around 2 000 subscribers
+     * (there is a file size limitation of 5 Megabyte in place that could cause large batches to fail).
+     *
+     * 'XmlData' containing data about imported subscribers in XML format,
+     * should be properly encoded depending on request format.
+     *
+     * The method requires use of demographic name mapping.
+     *
+     * @see http://se.apidoc.anpdm.com/Browse/Method/ImportService/CreateImportByXml
+     * @param string|int $mailingListId Id of the mailing list that you want to import subscribers to
+     * @param string $xmlData Subscribers data in xml format
+     * @param bool $demographicNameMapping Should demographic data be mapped by Name (true) or index order (false)
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function createImportByXml($mailingListId, $xmlData, $demographicNameMapping = false)
+    {
+        $demographicNameMapping = BooleanFormatter::toString($demographicNameMapping);
+
+        $endpoint = "/v1/import/mailinglist/{$mailingListId}/demographicmapping/{$demographicNameMapping}";
+        $response = $this->client->request("post", $endpoint, [
+            RequestOptions::JSON => [
+                "XmlData" => $xmlData
+            ]
         ]);
 
         return $this->responseToJson($response);
