@@ -39,12 +39,12 @@ class QueuedMethodHelper
 
     public static function make($pollUrl, Client $client = null)
     {
-        return static($pollUrl, $client);
+        return new static($pollUrl, $client);
     }
 
     public static function fromJson($json, Client $client = null)
     {
-        return static($json["Result"]["PollURL"], $client);
+        return new static($json["Result"]["PollURL"], $client);
     }
 
     /**
