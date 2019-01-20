@@ -4,6 +4,8 @@
 namespace Guilty\Apsis\Services;
 
 
+use Guilty\Apsis\Utils\BooleanFormatter;
+
 class Subscriber extends Service
 {
     /**
@@ -22,7 +24,7 @@ class Subscriber extends Service
      */
     public function createSubscriber($mailingListId, $updateIfExists, $subscriber)
     {
-        $updateIfExists = $updateIfExists ? "true" : "false";
+        $updateIfExists = BooleanFormatter::toString($updateIfExists);
         $endpoint = "/v1/subscribers/mailinglist/{$mailingListId}/create?updateIfExists={$updateIfExists}";
         $response = $this->client->request("post", $endpoint, [
             \GuzzleHttp\RequestOptions::JSON => $subscriber

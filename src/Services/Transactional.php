@@ -5,6 +5,7 @@ namespace Guilty\Apsis\Services;
 
 
 use Guilty\Apsis\Builders\TransactionalEmail;
+use Guilty\Apsis\Utils\BooleanFormatter;
 use Guilty\Apsis\Utils\DateFormatter;
 
 class Transactional extends Service
@@ -107,7 +108,7 @@ class Transactional extends Service
      */
     public function getTransactionResult($transactionId, $includeDemographicData)
     {
-        $includeDemographicData = $includeDemographicData ? "true" : "false";
+        $includeDemographicData = BooleanFormatter::toString($includeDemographicData);
 
         $endpoint = "/v1/transactional/{$transactionId}/result?includeDemographicData={$includeDemographicData}";
         $response = $this->client->request("get", $endpoint);
