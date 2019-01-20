@@ -9,12 +9,12 @@ class QueuedMethodHelper
 {
     // State constants, taken from the docs:
     // http://se.apidoc.anpdm.com/Help/QueuedMethods/About%20queued%20methods
-    const STATE_WAITING = "Waiting";
-    const STATE_STARTED = "Started";
-    const STATE_COMPLETED = "Completed";
-    const STATE_ERROR = "Error";
-    const STATE_FATAL_ERROR = "FatalError";
-    const STATE_REJECTED = "Rejected_ToOld";
+    const STATE_WAITING = 0;
+    const STATE_STARTED = 1;
+    const STATE_COMPLETED = 2;
+    const STATE_ERROR = -1;
+    const STATE_FATAL_ERROR = -2;
+    const STATE_REJECTED = -3;
 
     /**
      * @var string|null The url which will be polled for the state of the queued method.
@@ -63,7 +63,7 @@ class QueuedMethodHelper
         $response = $this->client->request("get", $this->pollUrl);
         $json = json_decode($response->getBody()->getContents(), true);
 
-        switch ($json["StateName"]) {
+        switch ((int)$json["State"]) {
             case self::STATE_WAITING:
             case self::STATE_STARTED:
                 // Do nothing.. for now
@@ -83,7 +83,7 @@ class QueuedMethodHelper
                 break;
 
             default:
-                throw new \Exception("Invalid state '{$json["StateName"]}' retrieved from PollUrl.");
+                throw new \Exception("Invalid state '{$json["StateName"]}' - {$json["State"]} retrieved from PollUrl.");
         }
     }
 
