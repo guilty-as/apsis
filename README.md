@@ -286,6 +286,20 @@ $transactionalService->getTransactionResult($transactionId, $includeDemographicD
 $transactionalService->sendTransactionalEmail($projectId, TransactionalEmail $transactionalEmail, \DateTimeInterface $sendDate = null, $allowInactiveProjects = true)
 ```
 
+### Import Service
+```php
+$apiKey = "YOUR-API-KEY";
+$importService = Factory::create($apiKey)->import()
+$importService->createImportByCsv($mailingListId, CsvImport $csvImport)
+$importService->createImportByXml($mailingListId, $xmlData, $demographicNameMapping = false)
+$importService->getImportIgnoredDuplicates($importId)
+$importService->getImportInvalidEmails($importId)
+$importService->getImportRecipientsOnOptOutAll($importId)
+$importService->getImportRecipientsOnOptOutList($importId)
+$importService->getImportResults($importId)
+$importService->getImportStatus($importId)
+```
+
 
 ### Queued Methods
 
@@ -340,7 +354,7 @@ These services are currently implemented, the rest is being worked on and will b
 - [x] Event
 - [x] Filter
 - [x] Folder
-- [ ] Import
+- [x] Import
 - [x] MailingList
 - [x] Newsletter
 - [x] Open
