@@ -70,7 +70,7 @@ class Factory
 
     public function makeDefaultClient($apiKey, $https = true)
     {
-        $baseUri = $https ? 'https://se.api.anpdm.com/' : 'http://se.api.anpdm.com/';
+        $baseUri = $https ? 'https://se.api.anpdm.com:8443/' : 'http://se.api.anpdm.com/';
 
         return new Client(
             [
