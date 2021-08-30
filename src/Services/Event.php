@@ -50,7 +50,7 @@ class Event extends Service
         ]);
 
         $endpoint = "/event/v2/attendees";
-        $response = $this->client->request("get", $endpoint, [
+        $response = $this->client->request("post", $endpoint, [
             \GuzzleHttp\RequestOptions::JSON => $params
         ]);
 
